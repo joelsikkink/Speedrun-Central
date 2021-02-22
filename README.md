@@ -34,15 +34,26 @@ Create per-user profiles
   -Created speedrun submission form
   
   -Created forums landing page
+  
+  -Will be working on admin dashboard/landing page
+  
+  -Will be working further on Forums page
 
 ## Jhun:
 
   -Worked on landing page
   
   -Created game page 1
+  
+  -Will be working on User landing page
+  
+  -Will be working on per-user profile pages
 
 ## Cade:
 
   -Created games list page
   
+  -Will be working on separate game pages
+  
+  -Will be working on code security audit
 # For further details on work completed and pending, please reference the "Issues" tab on Github.
