@@ -3,44 +3,46 @@
 For details on the template and how to install as well as how to run the code on your computer, please see http://ics-software-engineering.github.io/meteor-application-template-react/
 
 
-_What is complete so far:
+#What is complete so far:
 
--Template has been installed and is runnable
+Template has been installed and is runnable
 
--Games list page
+Games list page
 
--Speedrun Submission form
+Speedrun Submission form
 
--Forums landing page
+Forums landing page
 
--Landing page
+Landing page
 
-_What is pending:
+#What is pending:
 
--Create game specific pages with information regarding run times
+Create game specific pages with information regarding run times
 
--Finish forums to allow discussion creation and responses
+Finish forums to allow discussion creation and responses
 
--Create admin dashboard/landing page
+Create admin dashboard/landing page
 
--Create user dashboard/landing page
+Create user dashboard/landing page
 
--Create per-user profiles
+Create per-user profiles
 
-_Team work complete:
+#Team work complete:
 
--Joel:
+##Joel:
 
   -Created speedrun submission form
   
   
 
--Jhun:
+##Jhun:
 
   -Worked on landing page
+  
+  -Created game page 1
 
--Cade:
+##Cade:
 
   -Created games list page
   
-For further details on work completed and pending, please reference the "Issues" tab on Github.
+#For further details on work completed and pending, please reference the "Issues" tab on Github.
