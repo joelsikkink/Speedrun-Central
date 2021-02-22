@@ -33,7 +33,7 @@ Create per-user profiles
 
   -Created speedrun submission form
   
-  
+  -Created forums landing page
 
 ## Jhun:
 
