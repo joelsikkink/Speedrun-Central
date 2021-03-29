@@ -19,6 +19,7 @@ import Signout from '../pages/Signout';
 import Forums from '../pages/Forums';
 import Minecraft from '../pages/Minecraft';
 import UserPage from '../pages/UserPage';
+import SubmitRun from '../pages/SubmitRun';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -40,6 +41,8 @@ class App extends React.Component {
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
               <ProtectedRoute path='/submitRun' component={() => {window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdANqFKs4QvqN4waPNLvcA7-fuXWFZzKzMW7qB7NY5FU3umYA/viewform?usp=sf_link'; return null;}}/>
               <ProtectedRoute path="/forums" component={Forums}/>
+			        <ProtectedRoute path='/submitRun' component={SubmitRun}/>
+			        <ProtectedRoute path="/forums" component={Forums}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               <Route component={NotFound}/>
             </Switch>
