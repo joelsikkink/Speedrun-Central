@@ -11,6 +11,10 @@
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
   
+  "defaultProfiles": [
+    { "username": "gamer", "image": "NA", "owner": "john@foo.com" }
+  ],
+
   "defaultGameCards": [
 	{ 
 	  "name": "Minecraft: Java Edition", 
