@@ -4,16 +4,76 @@ For details on the template and how to install as well as how to run the code on
 
 
 # CHECKPOINT 2 (02/21/2021 - 03/21/2021)
-# What is complete so far:
 
-Site is running and working
+## Progress: What is new in the project since the last README submitted
 
-Un-Logged in users can view games and records
+The site is up and running with accounts fully implemented
+
+The site accepts user submitted runs
+
+The site has a game list page with pages for each of the 3 current games on the site
+
+There are now user profiles for both the admins and general users
+
+There are dashboard for both admins and general users
 
 
+## Link: 
+https://github.com/joelsikkink/Speedrun-Central
 
-Registered users can login to submit times
+## Pending: What is left to do now in order to complete the application as per the project design goals.
 
+We need to continue working on the forums area
+
+General polishing:
+  - User profile polish
+  - Game page polish
+  - Admin dashboard polish
+ 
+Unite the site's overall look
+
+## Roles and responsibilities: 
+
+The responsibilities are generally the same as the last checkpoint as most of what is left is polishing existing components that each individual has worked on.
+
+ ### Joel:
+Completed
+  - Worked on admin dashboard & associated collections
+
+  - Worked further on run submissions & associated collections
+  
+Current & Next
+  - Will be working on polishing up the admin dashboard/landing page
+  
+  - Will be working further on forums page
+
+### Jhun:
+Completed
+  - Worked on the user profiles & associated collections
+
+  - Worked on the game pages & associated collections
+   
+Current & Next
+  - Will be working on polsihing the user profile page
+  
+  - Will be working on polishing and completing game pages
+
+### Cade:
+Completed
+  - Did the Dynamic Analysis portion of this checkpoint
+  
+  - Did the security audit for this checkpoint
+  
+Current & Next
+  - Worked/ Working on the games & list pages further
+  
+  - Will be working on the code security audits and checks
+  
+  - Uniting the overall look and design of the site
+  
+### New completions: (if any...otherwise you can just note any progress made after previous assignment was submitted)
+### Current: What the team member is handling now.
+### Next: What the team member will handle after current task
 
 
 
