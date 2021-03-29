@@ -5,7 +5,7 @@ For details on the template and how to install as well as how to run the code on
 
 # CHECKPOINT 2 (02/21/2021 - 03/21/2021)
 
-## Progress: What is new in the project since the last README submitted
+## Progress:
 
 The site is up and running with accounts fully implemented
 
@@ -21,7 +21,7 @@ There are dashboard for both admins and general users
 ## Link: 
 https://github.com/joelsikkink/Speedrun-Central
 
-## Pending: What is left to do now in order to complete the application as per the project design goals.
+## Pending:
 
 We need to continue working on the forums area
 
@@ -71,11 +71,7 @@ Current & Next
   
   - Uniting the overall look and design of the site
   
-### New completions: (if any...otherwise you can just note any progress made after previous assignment was submitted)
-### Current: What the team member is handling now.
-### Next: What the team member will handle after current task
-
-
+#_________________________________________________________________________________________
 
 # CHECKPOINT 1 (02/20/2021)
 # What is complete so far:
