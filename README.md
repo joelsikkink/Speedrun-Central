@@ -3,6 +3,21 @@
 For details on the template and how to install as well as how to run the code on your computer, please see http://ics-software-engineering.github.io/meteor-application-template-react/
 
 
+# CHECKPOINT 2 (02/21/2021 - 03/21/2021)
+# What is complete so far:
+
+Site is running and working
+
+Un-Logged in users can view games and records
+
+
+
+Registered users can login to submit times
+
+
+
+
+# CHECKPOINT 1 (02/20/2021)
 # What is complete so far:
 
 Template has been installed and is runnable
