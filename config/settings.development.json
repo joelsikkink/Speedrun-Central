@@ -10,8 +10,26 @@
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
-
+  
   "defaultProfiles": [
     { "username": "gamer", "image": "NA", "owner": "john@foo.com" }
+  ],
+
+  "defaultGameCards": [
+	{ 
+	  "name": "Minecraft: Java Edition", 
+	  "description": "description",
+	  "image": "https://www.speedrun.com/themes/mc/cover-256.png"
+	},
+	{
+	  "name": "Super Mario 64", 
+	  "description": "description",
+	  "image": "https://www.speedrun.com/themes/sm64/cover-256.png"
+	},
+	{
+	  "name": "Roblox: Speed Run 4", 
+	  "description": "description",
+	  "image": "https://www.speedrun.com/themes/robloxsr4/cover-256.png"
+	}
   ]
 }

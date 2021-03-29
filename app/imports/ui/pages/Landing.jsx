@@ -1,69 +1,37 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Grid, Image, Header } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
+import { Meteor } from 'meteor/meteor';
+import { withTracker } from 'meteor/react-meteor-data';
+import { withRouter } from 'react-router-dom';
+import DefaultLanding from '../components/DefaultLanding';
+import UserLanding from '../components/UserLanding';
+import { Roles } from 'meteor/alanning:roles';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
   render() {
     return (
-        <div>
-          <Grid id='landing-page' verticalAlign='middle' textAlign='center'>
-            <Grid.Row>
-              <Image
-                src='images/image-16by9.png'
-              />
-              <Header as='h2' verticalAlign='middle'>
-                  Insert Banner Here
-              </Header>
-            </Grid.Row>
+      <div>
+        {this.props.currentUser === '' ? (
+            <DefaultLanding/>
+        ) : ''}
 
-            <Grid.Row>
-              <Header as='h1'>
-                  Live Run
-              </Header>
-            </Grid.Row>
-
-            <Grid.Row>
-              <iframe
-                src="https://player.twitch.tv/?channel=hirona&parent=localhost&muted=true"
-                height="720"
-                width="60%"
-                allowFullScreen="true">
-              </iframe>
-              <iframe src="https://www.twitch.tv/embed/hirona/chat?parent=localhost"
-                height="720"
-                width="30%">
-              </iframe>
-            </Grid.Row>
-
-            <Grid.Row>
-              <Header as='h1'>
-                Games
-              </Header>
-            </Grid.Row>
-
-            <Grid.Row>
-              <Image.Group>
-                <Image
-                    src='https://static-cdn.jtvnw.net/ttv-boxart/Minecraft-285x380.jpg'
-                    height='380'
-                    width='285'
-                    as={NavLink}
-                    exact to='/minecraft'
-                  />
-                <Image
-                    src='https://static-cdn.jtvnw.net/ttv-boxart/Minecraft-285x380.jpg'
-                    height='380'
-                    width='285'
-                    as={NavLink}
-                    exact to='/minecraft'
-                  />
-              </Image.Group>
-            </Grid.Row>
-          </Grid>
-        </div>
+        {this.props.currentUser ? (
+            <UserLanding/>
+        ) : ''}
+      </div>
     );
   }
 }
+/** Declare the types of all properties. */
+Landing.propTypes = {
+  currentUser: PropTypes.string,
+};
 
-export default Landing;
+/** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
+const LandingContainer = withTracker(() => ({
+  currentUser: Meteor.user() ? Meteor.user().username : '',
+}))(Landing);
+
+/** Enable ReactRouter for this component. https://reacttraining.com/react-router/web/api/withRouter */
+export default withRouter(LandingContainer);
