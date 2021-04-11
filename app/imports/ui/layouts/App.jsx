@@ -16,11 +16,18 @@ import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
-import Forums from '../pages/Forums';
+import ForumsLanding from '../pages/ForumsLanding';
 import Minecraft from '../pages/Minecraft';
 import UserPage from '../pages/UserPage';
 import SubmitRun from '../pages/SubmitRun';
-
+import AdminDash from '../pages/AdminDash';
+import GeneralForums from '../pages/GeneralForums';
+import ForumComment from '../pages/ForumComment';
+import MinecraftForums from '../pages/MinecraftForums';
+import SuperMario64Forums from '../pages/SuperMario64Forums';
+import RobloxSpeedrun4Forums from '../pages/RobloxSpeedrun4Forums';
+import OffTopicForums from '../pages/OffTopicForums';
+import AccountManagement from '../pages/AccountManagement';
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
   render() {
@@ -39,11 +46,16 @@ class App extends React.Component {
               <ProtectedRoute path="/list" component={ListStuff}/>
               <ProtectedRoute path="/add" component={AddStuff}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
-              <ProtectedRoute path='/submitRun' component={() => {window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdANqFKs4QvqN4waPNLvcA7-fuXWFZzKzMW7qB7NY5FU3umYA/viewform?usp=sf_link'; return null;}}/>
-              <ProtectedRoute path="/forums" component={Forums}/>
-			        <ProtectedRoute path='/submitRun' component={SubmitRun}/>
-			        <ProtectedRoute path="/forums" component={Forums}/>
-              <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+              <ProtectedRoute path="/forums" component={ForumsLanding}/>
+			  <ProtectedRoute path='/submitRun' component={SubmitRun}/>
+			  <ProtectedRoute path="/generalForums" component={GeneralForums}/>
+			  <ProtectedRoute path="/minecraftForums" component={MinecraftForums}/>
+			  <ProtectedRoute path="/superMario64Forums" component={SuperMario64Forums}/>
+			  <ProtectedRoute path="/robloxSpeedrun4Forums" component={RobloxSpeedrun4Forums}/>
+			  <ProtectedRoute path="/offTopicForums" component={OffTopicForums}/>
+			  <ProtectedRoute path="/forumComment" component={ForumComment}/>
+              <AdminProtectedRoute path="/admin" component={AccountManagement}/>
+			  <AdminProtectedRoute path="/admindash" component={AdminDash}/>
               <Route component={NotFound}/>
             </Switch>
             <Footer/>

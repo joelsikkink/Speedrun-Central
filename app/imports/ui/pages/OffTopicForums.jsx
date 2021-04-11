@@ -1,13 +1,14 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Table, Header, Loader } from 'semantic-ui-react';
+import { Container, Table, Header, Loader, Button } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
+import { withRouter, NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Stuffs } from '../../api/stuff/Stuff';
-import StuffItem from '../components/StuffItem';
+import { Forums } from '../../api/forums/Forums';
+import ForumItem from '../components/ForumItem';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class ListStuff extends React.Component {
+class OffTopicForums extends React.Component {
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
@@ -18,18 +19,21 @@ class ListStuff extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">List Stuff</Header>
+          <Header as="h2" textAlign="center">General Forums</Header>
+		  <Button as={NavLink} activeClassName="active" exact to="/forumComment" key='forumComment'>Make A Comment</Button>
           <Table celled>
             <Table.Header>
               <Table.Row>
-                <Table.HeaderCell>Name</Table.HeaderCell>
-                <Table.HeaderCell>Quantity</Table.HeaderCell>
-                <Table.HeaderCell>Condition</Table.HeaderCell>
-                <Table.HeaderCell>Edit</Table.HeaderCell>
+                <Table.HeaderCell>User</Table.HeaderCell>
+                <Table.HeaderCell>Comment</Table.HeaderCell>
+                <Table.HeaderCell>Time</Table.HeaderCell>
+				{Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+                  <Table.HeaderCell>Moderation</Table.HeaderCell>
+                  ) : ''}
               </Table.Row>
             </Table.Header>
             <Table.Body>
-              {this.props.stuffs.map((stuff) => <StuffItem key={stuff._id} stuff={stuff} />)}
+              {this.props.forums.map((forum) => <ForumItem key={forum._id} forum={forum} />)}
             </Table.Body>
           </Table>
         </Container>
@@ -38,18 +42,19 @@ class ListStuff extends React.Component {
 }
 
 /** Require an array of Stuff documents in the props. */
-ListStuff.propTypes = {
-  stuffs: PropTypes.array.isRequired,
+OffTopicForums.propTypes = {
+  forums: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
   // Get access to Stuff documents.
-  const subscription = Meteor.subscribe(Stuffs.userPublicationName);
-  console.log(Stuffs.collection.find({}).fetch());
+  const subscription = Meteor.subscribe('Forums');
+  console.log(subscription);
+  console.log(Forums.find({}).fetch());
   return {
-    stuffs: Stuffs.collection.find({}).fetch(),
+    forums: Forums.find({game: 'Off-Topic'}).fetch(),
     ready: subscription.ready(),
   };
-})(ListStuff);
+})(OffTopicForums);

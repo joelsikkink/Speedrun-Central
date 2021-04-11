@@ -2,31 +2,28 @@ import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
 
-/** Encapsulates state and variable values for this collection. */
-class RunsCollection {
-  constructor() {
-    // The name of this collection.
-    this.name = 'RunsCollection';
-    // Define the Mongo collection.
-    this.collection = new Mongo.Collection(this.name);
-    // Define the structure of each document in the collection.
-    this.schema = new SimpleSchema({
-	  game: {
+const Runs = new Mongo.Collection('Runs');
+
+/** Create a schema to constrain the structure of documents associated with this collection. */
+const RunSchema = new SimpleSchema({
+  game: {
         type: String,
-        allowedValues: ['Minecraft', 'Game2'],
-        defaultValue: '',
+        allowedValues: ['Minecraft', 'Super Mario 64', 'Roblox: Speed Run 4'],
+        defaultValue: 'Super Mario 64',
       },
-      time: Date,
+      time: String,
       owner: String,
 	  videoLink: String,
-	  approved: Boolean,
+	  approved: {type: Boolean},
     }, { tracker: Tracker });
-    // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
-    this.collection.attachSchema(this.schema);
-    // Define names for publications and subscriptions
-    this.userPublicationName = `${this.name}.publication.user`;
-    this.adminPublicationName = `${this.name}.publication.admin`;
-  }
-}
 
-export const Runs = new RunsCollection();
+/** Attach this schema to the collection. */
+Runs.attachSchema(RunSchema);
+Runs.userPublicationName = `${this.name}.publication.user`;
+Runs.adminPublicationName = `${this.name}.publication.admin`;
+/** Make the collection and schema available to other code. */
+export { Runs, RunSchema };
+
+
+
+

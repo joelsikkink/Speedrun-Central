@@ -5,17 +5,16 @@ import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
-import { Runs } from '../../api/runs/Runs';
+import { Forums } from '../../api/forums/Forums';
 
 /** Create a schema to specify the structure of the data to appear in the form. */
 const formSchema = new SimpleSchema({
   game: {
         type: String,
-        allowedValues: ['Minecraft', 'Super Mario 64', 'Roblox: Speed Run 4'],
-        defaultValue: 'Super Mario 64',
+        allowedValues: ['General Speedrunning','Minecraft', 'Super Mario 64', 'Roblox: Speed Run 4', 'Off-Topic'],
+        defaultValue: 'Minecraft',
       },
-      time: String,
-	  videoLink: String,
+      comment: String,
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
@@ -25,11 +24,11 @@ class SubmitRun extends React.Component {
 
   /** On submit, insert the data. */
   submit(data, formRef) {
-    const { game, time, videoLink } = data;
+    const { game, comment } = data;
     const owner = Meteor.user().username;
-	const approved = false;
+	const time = Date().toLocaleString();
 	console.log("getting here?")
-    Runs.insert({ game, time, owner, videoLink, approved },
+    Forums.insert({ game, time, comment, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -46,12 +45,11 @@ class SubmitRun extends React.Component {
     return (
         <Grid container centered>
           <Grid.Column>
-            <Header as="h2" textAlign="center">Submit Your Run!</Header>
+            <Header as="h2" textAlign="center">Comment to a Forum</Header>
             <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
               <Segment>
 				<SelectField name='game'/>
-                <TextField name='time'/>
-				<TextField name='videoLink'/>
+                <TextField name='comment'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
               </Segment>

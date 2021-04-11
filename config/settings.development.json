@@ -12,7 +12,8 @@
   ],
   
   "defaultProfiles": [
-    { "username": "gamer", "image": "NA", "owner": "john@foo.com" }
+    { "username": "gamer", "image": "NA", "owner": "john@foo.com" },
+	{ "username": "adminGamer", "image": "NA", "owner": "admin@foo.com" }
   ],
 
   "defaultGameCards": [
