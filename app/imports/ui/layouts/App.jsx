@@ -18,6 +18,8 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import ForumsLanding from '../pages/ForumsLanding';
 import Minecraft from '../pages/Minecraft';
+import SuperMario from '../pages/SuperMario';
+import Roblox from '../pages/Roblox';
 import UserPage from '../pages/UserPage';
 import SubmitRun from '../pages/SubmitRun';
 import AdminDash from '../pages/AdminDash';
@@ -38,6 +40,8 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/" component={Landing}/>
               <Route exact path="/minecraft" component={Minecraft}/>
+              <Route exact path="/supermario" component={SuperMario}/>
+              <Route exact path="/roblox" component={Roblox}/>
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <Route path="/signout" component={Signout}/>
@@ -47,15 +51,15 @@ class App extends React.Component {
               <ProtectedRoute path="/add" component={AddStuff}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
               <ProtectedRoute path="/forums" component={ForumsLanding}/>
-			  <ProtectedRoute path='/submitRun' component={SubmitRun}/>
-			  <ProtectedRoute path="/generalForums" component={GeneralForums}/>
-			  <ProtectedRoute path="/minecraftForums" component={MinecraftForums}/>
-			  <ProtectedRoute path="/superMario64Forums" component={SuperMario64Forums}/>
-			  <ProtectedRoute path="/robloxSpeedrun4Forums" component={RobloxSpeedrun4Forums}/>
-			  <ProtectedRoute path="/offTopicForums" component={OffTopicForums}/>
-			  <ProtectedRoute path="/forumComment" component={ForumComment}/>
+			        <ProtectedRoute path='/submitRun' component={SubmitRun}/>
+              <ProtectedRoute path="/generalForums" component={GeneralForums}/>
+              <ProtectedRoute path="/minecraftForums" component={MinecraftForums}/>
+              <ProtectedRoute path="/superMario64Forums" component={SuperMario64Forums}/>
+              <ProtectedRoute path="/robloxSpeedrun4Forums" component={RobloxSpeedrun4Forums}/>
+              <ProtectedRoute path="/offTopicForums" component={OffTopicForums}/>
+              <ProtectedRoute path="/forumComment" component={ForumComment}/>
               <AdminProtectedRoute path="/admin" component={AccountManagement}/>
-			  <AdminProtectedRoute path="/admindash" component={AdminDash}/>
+              <AdminProtectedRoute path="/admindash" component={AdminDash}/>
               <Route component={NotFound}/>
             </Switch>
             <Footer/>

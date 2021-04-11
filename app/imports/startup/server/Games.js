@@ -18,9 +18,5 @@ if (GamesInfo.find().count() === 0) {
 }
 
 Meteor.publish('GamesInfo', function publish() {
-  if (this.userId) {
-
-    return GamesInfo.find({});
-  }
-  return this.ready();
+  return GamesInfo.find({});
 });

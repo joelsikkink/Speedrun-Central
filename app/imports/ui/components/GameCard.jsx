@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+import { Card, Image, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter, NavLink } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
 import { GameInfo } from '/imports/api/gameinfo/gameinfo';
 
@@ -9,7 +9,7 @@ import { GameInfo } from '/imports/api/gameinfo/gameinfo';
 class GameCard extends React.Component {
   render() {
     return (
-      <Card raised color="blue">
+      <Card raised color="blue" as={NavLink} exact to={"/" + this.props.gameinfo.id} key={this.props.gameinfo.id}>
           <Image size='small' centered src={this.props.gameinfo.image}/>
           <Card.Content>
             <Card.Header>

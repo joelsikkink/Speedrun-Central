@@ -18,16 +18,19 @@
 
   "defaultGameCards": [
 	{ 
+	  "id": "minecraft",
 	  "name": "Minecraft: Java Edition", 
 	  "description": "description",
 	  "image": "https://www.speedrun.com/themes/mc/cover-256.png"
 	},
 	{
+	  "id": "supermario",
 	  "name": "Super Mario 64", 
 	  "description": "description",
 	  "image": "https://www.speedrun.com/themes/sm64/cover-256.png"
 	},
 	{
+	  "id": "roblox",
 	  "name": "Roblox: Speed Run 4", 
 	  "description": "description",
 	  "image": "https://www.speedrun.com/themes/robloxsr4/cover-256.png"
