@@ -4,6 +4,8 @@ import { Container, Loader, Header, Icon, Divider, Button, Form, Input, Table, G
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Profiles } from '../../api/profile/Profile.js';
+import { Runs } from '../../api/runs/Runs';
+import ProfRunItem from '../components/ProfRunItem';
 
 class UserPage extends React.Component {
     constructor(props) {
@@ -203,11 +205,16 @@ class UserPage extends React.Component {
                             <Header as="h2" textAlign="center">Submitted Runs</Header>
                             <Table celled>
                                 <Table.Header>
-                                    <Table.Row>
+									<Table.Row>
                                         <Table.HeaderCell>Game</Table.HeaderCell>
-                                        <Table.HeaderCell>Run</Table.HeaderCell>
+                                        <Table.HeaderCell>Time</Table.HeaderCell>
+				                        <Table.HeaderCell>VideoLink</Table.HeaderCell>
+										<Table.HeaderCell>Delete</Table.HeaderCell>
                                     </Table.Row>
                                 </Table.Header>
+								<Table.Body>
+                                  {this.props.runs.map((run) => <ProfRunItem key={run._id} run={run} />)}
+                                </Table.Body>
                             </Table>
                         </Container>
                     </Grid.Row>
@@ -220,14 +227,18 @@ class UserPage extends React.Component {
 UserPage.propTypes = {
     profile: PropTypes.object,
     currentId: PropTypes.string.isRequired,
+	runs: PropTypes.array.isRequired,
     ready: PropTypes.bool.isRequired,
 }
 
 export default withTracker(() => {
     const subscription = Meteor.subscribe(Profiles.userPublicationName);
+	const subscription2 = Meteor.subscribe('Runs');
     return {
       profile: Profiles.collection.find({}).fetch()[0],
       currentId: Meteor.user() ? Meteor.userId() : '',
+	  runs: Runs.find({approved: true}, {_id: Meteor.user().username}).fetch(),
       ready: subscription.ready(),
+
     };
 })(UserPage);

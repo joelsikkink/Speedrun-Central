@@ -16,7 +16,15 @@ function createUser(email, password, role) {
     Roles.addUsersToRoles(userID, 'admin');
   }
 }
+Meteor.methods({
+  deleteAcc: function(removeId){
+    return Meteor.users.remove(removeId);
+  },
+});
 
+Meteor.publish('userDisplay', function() {
+    return Meteor.users.find({});
+});
 /** When running app for first time, pass a settings file to set up a default user account. */
 if (Meteor.users.find().count() === 0) {
   if (Meteor.settings.defaultAccounts) {
