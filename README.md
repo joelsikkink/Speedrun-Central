@@ -2,6 +2,59 @@
 
 For details on the template and how to install as well as how to run the code on your computer, please see http://ics-software-engineering.github.io/meteor-application-template-react/
 
+# CHECKPOINT 3 (03/22/2021 - 04/11/2021)
+
+## Progress:
+
+The site is basically complete, functioning, accessible, and all core parts are implemented
+  - Accounts fully working and implemented
+  - Game pages fully working and implemented
+  - Forums pages fully working and implemented
+  - User profile pages fully working and implemented
+  - Admin management pages fully working and implemented
+  - All dbs are fully working and implemented
+  - Lasting bugs were sqashed out
+
+## Link: 
+https://github.com/joelsikkink/Speedrun-Central
+
+## Pending:
+- Possible QoL fixes
+- Site beautification
+
+## Roles and responsibilities: 
+
+The responsibilities are generally the same as the previous checkpoints as we all did our respective parts and the site was, for the most part, completed.
+
+ ### Joel:
+Completed
+  - Fully completed forums
+  - Fully completed speedrun data management
+  - Bugfixing on pages and in dbs
+  
+Current & Next
+  - Working on beautification of the site and QoL fixes.
+
+### Jhun:
+Completed
+  - Fully completed profile pages
+  - Fully complteted game pages
+  - Bugfixing on pages and in dbs
+   
+Current & Next
+  - Working on beautification of the site and QoL fixes.
+
+### Cade:
+Completed
+  - Did the dynamic & static analysis portion of this checkpoint.
+  - Did the security audit (Fuzz test) for this checkpoint.
+  
+Current & Next
+  - Working on beautification of the site and QoL fixes.
+  - Will be working on the code security audits and checks
+  
+# _______________________________________________________________
+
 
 # CHECKPOINT 2 (02/21/2021 - 03/21/2021)
 
