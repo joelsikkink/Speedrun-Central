@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import { Container, Loader, Image, Table } from 'semantic-ui-react';
 import { GamesInfo } from '/imports/api/gameinfo/gameinfo';
+import { Runs } from '../../api/runs/Runs';
+import RunItem from '../components/RunItem';
 
 class SuperMario extends React.Component {
   render() {
@@ -14,7 +16,19 @@ class SuperMario extends React.Component {
     return (
       <Container>
         <Image centered src={this.props.gameinfo[0].image}/>
-        <Table></Table>
+        <Table celled>
+            <Table.Header>
+              <Table.Row>
+                <Table.HeaderCell>Game</Table.HeaderCell>
+                <Table.HeaderCell>Time</Table.HeaderCell>
+                <Table.HeaderCell>VideoLink</Table.HeaderCell>
+                <Table.HeaderCell>Owner</Table.HeaderCell>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              {this.props.runs.map((run) => <RunItem key={run._id} run={run} />)}
+            </Table.Body>
+          </Table>
       </Container>
     );
   }
@@ -22,6 +36,7 @@ class SuperMario extends React.Component {
 
 SuperMario.propTypes = {
   gameinfo: PropTypes.array.isRequired,
+  runs: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -29,8 +44,10 @@ SuperMario.propTypes = {
 export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe('GamesInfo');
+  const subscription2 = Meteor.subscribe('Runs');
   return {
     gameinfo: GamesInfo.find({ id: "supermario" }).fetch(),
+	runs: Runs.find({approved: true, game: 'Super Mario 64'}).fetch(),
     ready: subscription.ready(),
   };
 })(SuperMario);

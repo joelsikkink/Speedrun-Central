@@ -18,11 +18,8 @@ if (Runs.find().count() === 0) {
 }
 
 Meteor.publish('Runs', function publish() {
-  if (this.userId) {
-
-    return Runs.find({});
-  }
-  return this.ready();
+ return Runs.find({});
+ return this.ready();
 });
 
 Meteor.methods({

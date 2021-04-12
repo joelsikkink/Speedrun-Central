@@ -19,7 +19,7 @@ class AdminDash extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">List Stuff (Admin)</Header>
+          <Header as="h2" textAlign="center">Approve or Deny a Run</Header>
           <Table celled>
             <Table.Header>
               <Table.Row>

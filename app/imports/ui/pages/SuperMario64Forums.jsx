@@ -19,7 +19,7 @@ class SuperMario64Forums extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">General Forums</Header>
+          <Header as="h2" textAlign="center">Super Mario 64 Forums</Header>
 		  <Button as={NavLink} activeClassName="active" exact to="/forumComment" key='forumComment'>Make A Comment</Button>
           <Table celled>
             <Table.Header>
