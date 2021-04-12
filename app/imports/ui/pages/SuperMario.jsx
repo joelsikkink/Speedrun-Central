@@ -5,7 +5,7 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Loader, Image, Table } from 'semantic-ui-react';
 import { GamesInfo } from '/imports/api/gameinfo/gameinfo';
 
-class Minecraft extends React.Component {
+class SuperMario extends React.Component {
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Retrieving Record Data</Loader>;
   }
@@ -20,7 +20,7 @@ class Minecraft extends React.Component {
   }
 }
 
-Minecraft.propTypes = {
+SuperMario.propTypes = {
   gameinfo: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
@@ -30,7 +30,7 @@ export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe('GamesInfo');
   return {
-    gameinfo: GamesInfo.find({ id: "minecraft" }).fetch(),
+    gameinfo: GamesInfo.find({ id: "supermario" }).fetch(),
     ready: subscription.ready(),
   };
-})(Minecraft);
+})(SuperMario);

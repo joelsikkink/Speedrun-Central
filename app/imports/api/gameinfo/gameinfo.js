@@ -7,6 +7,7 @@ const GamesInfo = new Mongo.Collection('GamesInfo');
 
 /** Create a schema to constrain the structure of documents associated with this collection. */
 const GameSchema = new SimpleSchema({
+  id: String,
   name: String,
   description: String,
   image: String,
