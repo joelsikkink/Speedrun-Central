@@ -6,7 +6,7 @@ For details on the template and how to install as well as how to run the code on
 
 ## Roles and responsibilities: 
 
-The responsibilities are generally towards finishing up the last bits of the program since we completed the program on the most part by checkpoint 3.
+The responsibilities are generally towards finishing up the last bits of the program since we completed the program on checkpoint 3.
 
  ### Joel:
 Completed
@@ -34,7 +34,7 @@ https://github.com/joelsikkink/Speedrun-Central
 https://github.com/joelsikkink/Speedrun-Central/blob/main/README.md
 
 ## Version Release
-https://github.com/joelsikkink/Speedrun-Central/releases
+https://github.com/joelsikkink/Speedrun-Central/releases/tag/1.0
 
 ## Wiki Page
 https://github.com/joelsikkink/Speedrun-Central/wiki
@@ -95,12 +95,14 @@ The speedrun attempt submission page is where users will be able to submit their
 ## Dev Notes
 
 ### Joel
-
+- I learned a lot more about MongoDB while working on this project. There were some issues I faced learning it but I figured them out.
+- There were many small details that I enjoyed adding to the final implementation like the image in the browser tab and the post counter for the forums landing page.
+- I wish I had sorted the runs by time but that never got implemented. The runs simply just show 
 
 ### Jhun
 - One main challenge I faced was implementing a way for users to edit their profile information.
 - The most important achievement that I'm proud of is the twitch stream and chat implimentation for the application.
-- One disappoiintment was not being able to fix a problem with users editing their profiles.
+- One disappointment was not being able to fix a problem with users editing their profiles.
 
 ### Cade
 
