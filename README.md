@@ -97,7 +97,7 @@ The speedrun attempt submission page is where users will be able to submit their
 ### Joel
 - I learned a lot more about MongoDB while working on this project. There were some issues I faced learning it but I figured them out.
 - There were many small details that I enjoyed adding to the final implementation like the image in the browser tab and the post counter for the forums landing page.
-- I wish I had sorted the runs by time but that never got implemented. The runs simply just show 
+- I wish I had sorted the runs by time but that never got implemented. The runs simply just show the submitted order and not by "fastest time"
 
 ### Jhun
 - One main challenge I faced was implementing a way for users to edit their profile information.
