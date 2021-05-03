@@ -82,7 +82,6 @@ export default class Signin extends React.Component {
               <Message
                 error
                 header="Login was not successful"
-                content={this.state.error}
               />
             )}
           </Grid.Column>
