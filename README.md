@@ -105,7 +105,9 @@ The speedrun attempt submission page is where users will be able to submit their
 - One disappointment was not being able to fix a problem with users editing their profiles.
 
 ### Cade
-
+- As the lead for security policy and review, I found some difficulties at first when it came to ensuring that our application is up to par with our security standards, however I eventually figured out effective methods for reviewing our codebase and application.
+- I learned a lot about how to implement a SDL plan and see it through until the final release.
+- Although I wish we were able to use a dynamic analysis tool, I am proud of the work that we put in the ensure the security of our application.
 
 # _______________________________________________________________
 
