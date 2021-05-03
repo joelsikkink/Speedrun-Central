@@ -62,33 +62,33 @@ The app should now be available at [http://localhost:3000](http://localhost:3000
 ## Landing Page
 Users who are logged out will find themselves to a basic page our app on the landing page. It contains a banner of our website and a way for users to register and be able to use our application. Once created and logged in, users will be able to use all functionality of our application.
 
-![] (wiki-images/Homepage.PNG)
+![](wiki-images/Homepage.PNG)
 
 ## User Homepage
 Once logged in the landing page will be replaced with a twitch stream and chat. Users will be able to watch live speedrun attempts through our page and interact with the speedrun's personal twitch chat to be apart of their community.
 
-![] (wiki-images/logged-in-home.PNG)
+![](wiki-images/logged-in-home.PNG)
 
 ## User Profile Page
 The user profile page is where users can view and edit their profile information. This page also contain a list of all run submissions from the user.
 
-![] (wiki-images/profile-page.PNG)
+![](wiki-images/profile-page.PNG)
 
 ## Game Page
 The games tab will lead a user to a page that consists of all the current games available to the user to be able to submit their speedrun attempts. Each game page consists of a leaderboard of the submitted runs from users of the application.
 
-![] (wiki-images/games-page.PNG)
-![] (wiki-images/minecraft-page.PNG)
+![](wiki-images/games-page.PNG)
+![](wiki-images/minecraft-page.PNG)
 
 ## Forum Page
 The forum page is where users will be able to communicate with other users of the application to share and discuss about speedruning games.
 
-![] (wiki-images/general-forums-page-not-admin.PNG)
+![](wiki-images/general-forums-page-not-admin.PNG)
 
 ## Speedrun Attempt Submission Page
 The speedrun attempt submission page is where users will be able to submit their speedrun attempts to the applications. Each speedrun attempt will be evaluated by admins to check for legitimacy. User submissions require the game category of the attempt, the speedrun time of the attempt, and a link to a video of the speedrun attempt.
 
-![] (wiki-images/submit-run-page.PNG)
+![](wiki-images/submit-run-page.PNG)
 
 # _______________________________________________________________
 
