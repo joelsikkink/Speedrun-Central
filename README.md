@@ -2,6 +2,112 @@
 
 For details on the template and how to install as well as how to run the code on your computer, please see http://ics-software-engineering.github.io/meteor-application-template-react/
 
+# RELEASE
+
+## Roles and responsibilities: 
+
+The responsibilities are generally towards finishing up the last bits of the program since we completed the program on the most part by checkpoint 3.
+
+ ### Joel:
+Completed
+  - Wiki page creation
+  - Final code review
+
+### Jhun:
+Completed
+  - README.txt edits
+  - Final code review
+
+### Cade:
+Completed
+  - Incident reponse plan
+  - Final security review
+
+# _______________________________________________________________
+
+## Links
+
+## Online Repository
+https://github.com/joelsikkink/Speedrun-Central
+
+## Final Project Documentation
+https://github.com/joelsikkink/Speedrun-Central/blob/main/README.md
+
+## Version Release
+https://github.com/joelsikkink/Speedrun-Central/releases
+
+## Wiki Page
+https://github.com/joelsikkink/Speedrun-Central/wiki
+
+# _______________________________________________________________
+
+## Instilation Instructions
+
+1. Install [Meteor](https://www.meteor.com/install).
+
+2. Download a copy of the [Speedrun Central App](https://github.com/joelsikkink/Speedrun-Central) from our GitHub Repo. You may clone it using git.
+
+3. In your terminal, cd into the app/ directory of your Waggle Application and install the necessary npm libraries by running the following command:
+
+``` $ meteor npm install ```
+
+4. Run the app with the following command:
+
+``` $ meteor npm run start ```
+
+The app should now be available at [http://localhost:3000](http://localhost:3000).
+
+# Guided Tour
+
+## Landing Page
+Users who are logged out will find themselves to a basic page our app on the landing page. It contains a banner of our website and a way for users to register and be able to use our application. Once created and logged in, users will be able to use all functionality of our application.
+
+![] (wiki-images/Homepage.PNG)
+
+## User Homepage
+Once logged in the landing page will be replaced with a twitch stream and chat. Users will be able to watch live speedrun attempts through our page and interact with the speedrun's personal twitch chat to be apart of their community.
+
+![] (wiki-images/logged-in-home.PNG)
+
+## User Profile Page
+The user profile page is where users can view and edit their profile information. This page also contain a list of all run submissions from the user.
+
+![] (wiki-images/profile-page.PNG)
+
+## Game Page
+The games tab will lead a user to a page that consists of all the current games available to the user to be able to submit their speedrun attempts. Each game page consists of a leaderboard of the submitted runs from users of the application.
+
+![] (wiki-images/games-page.PNG)
+![] (wiki-images/minecraft-page.PNG)
+
+## Forum Page
+The forum page is where users will be able to communicate with other users of the application to share and discuss about speedruning games.
+
+![] (wiki-images/general-forums-page-not-admin.PNG)
+
+## Speedrun Attempt Submission Page
+The speedrun attempt submission page is where users will be able to submit their speedrun attempts to the applications. Each speedrun attempt will be evaluated by admins to check for legitimacy. User submissions require the game category of the attempt, the speedrun time of the attempt, and a link to a video of the speedrun attempt.
+
+![] (wiki-images/submit-run-page.PNG)
+
+# _______________________________________________________________
+
+## Dev Notes
+
+### Joel
+
+
+### Jhun
+- One main challenge I faced was implementing a way for users to edit their profile information.
+- The most important achievement that I'm proud of is the twitch stream and chat implimentation for the application.
+- One disappoiintment was not being able to fix a problem with users editing their profiles.
+
+### Cade
+
+
+# _______________________________________________________________
+
+
 # CHECKPOINT 3 (03/22/2021 - 04/11/2021)
 
 ## Progress:
